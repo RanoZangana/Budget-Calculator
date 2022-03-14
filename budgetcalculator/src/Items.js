@@ -4,7 +4,6 @@ import './App.css';
 function Items() {
     return (
         <div className="Items">
-
         </div>
     );
 }
