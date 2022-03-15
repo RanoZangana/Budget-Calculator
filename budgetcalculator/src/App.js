@@ -16,7 +16,7 @@ function App() {
           <option value="entertainment">Entertainment</option>
           <option value="rent">rent</option> 
         </select>
-        <input type="date" />
+        <input type="date" min="1000-01-01" max="9999-12-31" />
         <button onClick={submitInput} > button</button>
       </form>
       <Items/>
