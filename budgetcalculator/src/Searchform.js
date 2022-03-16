@@ -25,15 +25,16 @@ function SearchForm() {
           onChange={(e) => setCategory(e.target.value)}
         >
           <option value="" disabled selected>Choose Category</option>
-          <option value="entertainment">Entertainment</option>
           <option value="housing">Housing</option>
-          <option value="transportation">Transportation</option>
-          <option value="food">Food</option>
+          <option value="utilities">Utilities</option>
           <option value="insurance">Insurance</option>
           <option value="healthcare">Healthcare</option>
+          <option value="food">Food</option>
+          <option value="transportation">Transportation</option>
+          <option value="entertainment">Entertainment</option>
           <option value="savings">Savings</option>
-          <option value="utilities">Utilities</option>
           <option value="miscellanous">Miscellanous</option>
+          
         </select>
         <input
           id='date'
@@ -44,7 +45,7 @@ function SearchForm() {
           value={date}
           onChange={(e) => setDate(e.target.value)}
         />
-        <button onClick={submitInput} >button</button>
+        <button onClick={submitInput} >Add</button>
       </form>
       <Items />
     </div>
