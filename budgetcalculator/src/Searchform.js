@@ -17,16 +17,7 @@ function SearchForm() {
     return (
         <div className="SearchForm">
             <form onSubmit={handleSubmit}>
-                <CurrencyInput
-                    id='price'
-                    placeholder='Enter a certain amount'
-                    required
-                    decimalsScale={2}
-                    defaultValue={0}
-                    maxLength={10}
-                    value={currency}
-                    onChange={(e) => setCurrency(e.target.value)}
-                />
+                <input type="number" onChange={(e) => setCurrency(e.target.value)} step="0.001"></input>
                 <select
                     value={category}
                     onChange={(e) => setCategory(e.target.value)}
