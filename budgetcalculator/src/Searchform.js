@@ -10,11 +10,11 @@ function SearchForm() {
   const [date, setDate] = useState();
   return (
     <div className="SearchForm">
-      <h1>Hellow</h1>
       <form>
         <CurrencyInput
           id='price'
           placeholder='Enter a certain amount'
+          required
           decimalsLimit={2}
           defaultValue={0}
           value={currency}
@@ -24,7 +24,7 @@ function SearchForm() {
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         >
-          <option value="">Choose Category</option>
+          <option value="" disabled selected>Choose Category</option>
           <option value="entertainment">Entertainment</option>
           <option value="housing">Housing</option>
           <option value="transportation">Transportation</option>
@@ -38,6 +38,7 @@ function SearchForm() {
         <input
           id='date'
           type="date"
+          required
           min="1000-01-01"
           max="9999-12-31"
           value={date}
