@@ -9,9 +9,9 @@ function SearchForm() {
     const [category, setCategory] = useState();
     const [date, setDate] = useState();
 
-    const handleSubmit = (e) =>{
+    const handleSubmit = (e) => {
         e.preventDefault();
-        const report = {currency, category, date};
+        const report = { currency, category, date };
         console.log(report);
     }
     return (
@@ -23,7 +23,7 @@ function SearchForm() {
                     required
                     decimalsScale={2}
                     defaultValue={0}
-                    maxLength = {10}
+                    maxLength={10}
                     value={currency}
                     onChange={(e) => setCurrency(e.target.value)}
                 />
@@ -57,5 +57,4 @@ function SearchForm() {
         </div>
     );
 }
-
 export default SearchForm;
