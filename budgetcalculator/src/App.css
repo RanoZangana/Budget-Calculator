@@ -11,7 +11,7 @@ h1
   font-size: 100px;
   color:white;
   text-shadow: 4px 4px hsl(98, 100%, 79%);
-  margin: 67px 0px 10px 0px;
+  margin: 60px 0px 10px 0px;
 }
 
 h2
@@ -62,13 +62,18 @@ input
   text-align: center;
   border: none;
   background: none;
-  font-size: 20px;
+  font-size: 25px;
+  height: 60px;
+  width: 200px;
   color:rgb(75, 75, 75);
 }
 
 select
 {
   text-align: center;
+  font-size: 18px;
+  color:rgb(75, 75, 75);
+  font-family: 'Lora', serif;
   border: none;
   background: none;
 }
@@ -81,6 +86,8 @@ option
 #date
 {
   text-align: center;
+  font-size: 18px;
+  color:rgb(75, 75, 75);
   border: none;
   background: none;
   
@@ -91,6 +98,8 @@ option
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 50px;
+  line-height: 60px;
+  text-align: center;
   color: rgb(75, 75, 75);
   padding: 8;
   border: none;
