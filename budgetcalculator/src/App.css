@@ -1,17 +1,36 @@
 html {
-  background-color: rgb(184, 245, 197);
+  background-color: rgb(155, 209, 167);
+  padding: 20px;
 }
 
 .App {
   text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-size: 220%;
-  color:rgb(48, 48, 48)
   
+}
+
+h1
+{
+  font-family: 'Poppins', sans-serif;
+  font-size: 100px;
+  color:white;
+  text-shadow: 4px 4px hsl(98, 100%, 79%);
+  margin: 67px 0px 10px 0px;
+}
+
+h2
+{
+  font-family: 'Lora', serif;
+  color:rgb(75, 75, 75);
+  font-size: 20px;
 }
 
 input{
   font-family: 'Lora', serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
 }
 
 option

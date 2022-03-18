@@ -54,7 +54,7 @@ function SearchForm() {
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
                 />
-                <button>Add Report</button>
+                <button>+</button>
             </form>
             <Items />
         </div>
