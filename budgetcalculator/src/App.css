@@ -20,25 +20,46 @@ h2
   font-family: 'Lora', serif;
   color:rgb(75, 75, 75);
   font-size: 20px;
+  margin: 16px 0px 50px 0px;
 }
-
-
 
 .container1 {
   display: grid;
-  grid-template-columns: 3fr 3fr 3fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
-input{
-  display: grid;
-  font-family: 'Lora', serif;
+.SearchForm
+{
   grid-column-start: 2;
-  grid-column-end: five;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 4px 4px hsl(98, 100%, 79%);
+}
+
+.Items
+{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+}
+
+#form
+{
+  display:flex;
+  justify-content: space-around;
+}
+
+input
+{
+  font-family: 'Lora', serif;
 }
 
 #amount
 {
-  grid-column-start: 2;
+  text-align: center;
   border: none;
   background: none;
   font-size: 20px;
@@ -47,6 +68,7 @@ input{
 
 select
 {
+  text-align: center;
   border: none;
   background: none;
 }
@@ -58,6 +80,7 @@ option
 
 #date
 {
+  text-align: center;
   border: none;
   background: none;
   
@@ -68,7 +91,7 @@ option
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 50px;
-  color: white;
+  color: rgb(75, 75, 75);
   padding: 8;
   border: none;
   background: none;
