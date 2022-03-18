@@ -5,6 +5,7 @@ function Footer() {
     return (
         <div className="Footer">
             <button id='save-button'>Save ></button>
+            <p id='authors'>Created by Rano, Michael and Julia</p>
         </div>
     );
 }
