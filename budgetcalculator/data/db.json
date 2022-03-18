@@ -1,0 +1,47 @@
+{
+  "budget": [
+    {
+      "currency": 0,
+      "category": null,
+      "date": null
+    },
+    [
+      {
+        "currency": "400",
+        "category": "entertainment",
+        "date": "2022-03-18"
+      }
+    ],
+    [
+      {
+        "currency": "400",
+        "category": "entertainment",
+        "date": "2022-03-18"
+      },
+      {
+        "currency": "4000",
+        "category": "food",
+        "date": "2022-03-01"
+      }
+    ],
+    [
+      {
+        "currency": "213",
+        "category": "transportation",
+        "date": "2022-03-18"
+      }
+    ],
+    [
+      {
+        "currency": "213",
+        "category": "transportation",
+        "date": "2022-03-18"
+      },
+      {
+        "currency": "213",
+        "category": "transportation",
+        "date": "2022-03-18"
+      }
+    ]
+  ]
+}
