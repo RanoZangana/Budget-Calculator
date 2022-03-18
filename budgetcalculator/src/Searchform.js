@@ -24,7 +24,8 @@ function SearchForm() {
     return (
         <div className="SearchForm">
             <form onSubmit={handleSubmit}>
-                <input 
+                <input
+                id='amount' 
                 type="number" 
                 onChange={(e) => setCurrency(e.target.value)} 
                 step="any"
@@ -54,7 +55,7 @@ function SearchForm() {
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
                 />
-                <button>+</button>
+                <button id='add-button'>+</button>
             </form>
             <Items />
         </div>

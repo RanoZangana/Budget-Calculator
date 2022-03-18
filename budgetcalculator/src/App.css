@@ -11,6 +11,7 @@ html {
 h1
 {
   font-family: 'Poppins', sans-serif;
+  font-style: italic;
   font-size: 100px;
   color:white;
   text-shadow: 4px 4px hsl(98, 100%, 79%);
@@ -24,13 +25,27 @@ h2
   font-size: 20px;
 }
 
-input{
-  font-family: 'Lora', serif;
-}
+
 
 .container {
   display: grid;
   grid-template-columns: 3fr 3fr 3fr;
+}
+
+input{
+  font-family: 'Lora', serif;
+}
+
+#amount
+{
+  border: none;
+  background: none;
+}
+
+select
+{
+  border: none;
+  background: none;
 }
 
 option
@@ -38,8 +53,35 @@ option
   font-family: 'Lora', serif;
 }
 
-button
+#date
 {
-  font-family: 'Lora', serif;
+  border: none;
+  background: none;
+}
+
+#add-button
+{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  padding: 8;
+  border: none;
+  background: none;
+  text-shadow: 1.5px 1.5px hsl(98, 100%, 79%);
+  
+}
+
+#save-button
+{
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  background:rgb(75, 75, 75);
+  border: none;
+  padding: 4px 10px 4px 10px;
+  box-shadow: 4px 4px hsl(98, 100%, 79%);
 }
 

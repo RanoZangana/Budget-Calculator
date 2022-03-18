@@ -4,6 +4,7 @@ import './Items';
 import Items from './Items';
 import SearchForm from './Searchform';
 import Grid from './Grid'
+import Footer from './Footer'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Grid />
       <SearchForm />
       <Items />
+      <Footer />
     </div>
   );
 }
