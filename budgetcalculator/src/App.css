@@ -3,13 +3,9 @@ html {
   padding: 20px;
 }
 
-.App {
-  text-align: center;
-  
-}
-
 h1
 {
+  text-align: center;
   font-family: 'Poppins', sans-serif;
   font-style: italic;
   font-size: 100px;
@@ -20,6 +16,7 @@ h1
 
 h2
 {
+  text-align: center;
   font-family: 'Lora', serif;
   color:rgb(75, 75, 75);
   font-size: 20px;
@@ -33,12 +30,15 @@ h2
 }
 
 input{
+  display: grid;
   font-family: 'Lora', serif;
+  grid-column-start: 2;
+  grid-column-end: five;
 }
 
 #amount
 {
-  grid-column-start: 4;
+  grid-column-start: 2;
   border: none;
   background: none;
   font-size: 20px;
@@ -60,6 +60,7 @@ option
 {
   border: none;
   background: none;
+  
 }
 
 #add-button
@@ -75,8 +76,15 @@ option
   
 }
 
+.Footer
+{
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+}
+
 #save-button
 {
+  grid-column-start: 2;
   border-radius: 10px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
@@ -91,6 +99,8 @@ option
 
 #authors
 {
+  grid-column-start: 2;
+  text-align: center;
   font-family: 'Lora', serif;
   font-size: 12px;
   color:rgb(75, 75, 75);
