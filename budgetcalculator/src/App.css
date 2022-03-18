@@ -27,7 +27,7 @@ h2
 
 
 
-.container {
+.container1 {
   display: grid;
   grid-template-columns: 3fr 3fr 3fr;
 }
@@ -38,6 +38,7 @@ input{
 
 #amount
 {
+  grid-column-start: 4;
   border: none;
   background: none;
   font-size: 20px;
