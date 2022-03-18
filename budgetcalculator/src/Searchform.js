@@ -38,7 +38,7 @@ function SearchForm() {
 
     return (
         <div className="SearchForm">
-            <form onSubmit={handleSubmit}>
+            <form id='form' onSubmit={handleSubmit}>
                 <input
                     id='amount-input'
                     type="number"

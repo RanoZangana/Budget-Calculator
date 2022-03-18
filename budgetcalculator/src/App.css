@@ -3,49 +3,77 @@ html {
   padding: 20px;
 }
 
-.App {
-  text-align: center;
-  
-}
-
 h1
 {
+  text-align: center;
   font-family: 'Poppins', sans-serif;
   font-style: italic;
   font-size: 100px;
   color:white;
   text-shadow: 4px 4px hsl(98, 100%, 79%);
-  margin: 67px 0px 10px 0px;
+  margin: 60px 0px 10px 0px;
 }
 
 h2
 {
+  text-align: center;
   font-family: 'Lora', serif;
   color:rgb(75, 75, 75);
   font-size: 20px;
+  margin: 16px 0px 50px 0px;
 }
 
-
-
-.container {
+.container1 {
   display: grid;
-  grid-template-columns: 3fr 3fr 3fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
-input{
+.SearchForm
+{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 4px 4px hsl(98, 100%, 79%);
+}
+
+.Items
+{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+}
+
+#form
+{
+  display:flex;
+  justify-content: space-around;
+}
+
+input
+{
   font-family: 'Lora', serif;
 }
 
 #amount
 {
+  text-align: center;
   border: none;
   background: none;
-  font-size: 20px;
+  font-size: 25px;
+  height: 60px;
+  width: 200px;
   color:rgb(75, 75, 75);
 }
 
 select
 {
+  text-align: center;
+  font-size: 18px;
+  color:rgb(75, 75, 75);
+  font-family: 'Lora', serif;
   border: none;
   background: none;
 }
@@ -57,8 +85,12 @@ option
 
 #date
 {
+  text-align: center;
+  font-size: 18px;
+  color:rgb(75, 75, 75);
   border: none;
   background: none;
+  
 }
 
 #add-button
@@ -66,7 +98,9 @@ option
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 50px;
-  color: white;
+  line-height: 60px;
+  text-align: center;
+  color: rgb(75, 75, 75);
   padding: 8;
   border: none;
   background: none;
@@ -74,8 +108,15 @@ option
   
 }
 
+.Footer
+{
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+}
+
 #save-button
 {
+  grid-column-start: 2;
   border-radius: 10px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
@@ -90,6 +131,8 @@ option
 
 #authors
 {
+  grid-column-start: 2;
+  text-align: center;
   font-family: 'Lora', serif;
   font-size: 12px;
   color:rgb(75, 75, 75);
