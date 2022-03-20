@@ -1,11 +1,9 @@
 import React from "react";
 import "./App.css"
+import useFetch from "./useFetch";
 
 function BudgetList({ budgets, category }){
     
-    const handleClick = () => {
-
-    }
 
     return (
         <div className="budget-list">
@@ -15,7 +13,6 @@ function BudgetList({ budgets, category }){
                 <h2>{budget.category}</h2>
                 <p>{budget.currency}</p>
                 <p>{budget.date}</p>
-                <button onClick={handleClick}></button>
             </div>
             ))}
         </div>

@@ -1,48 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import Items from './Items';
+import './Items';
 
-function SearchForm() {
-
-    const [currency, setCurrency] = useState("");
+function ItemForm({ addItem }) {
+    const [money, setMoney] = useState("");
     const [category, setCategory] = useState("");
     const [date, setDate] = useState("");
-    const [items, setItems] = useState([]);
-    const [isPending, setIsPending] = useState(false);
-
-
-    function addItem(currency, category, date) {
-        const newItems = [...items, { currency, category, date }];
-        setItems(newItems);
-        const requestOption = {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(newItems)
-        }
-        fetch("http://localhost:8000/budget",requestOption)
-        .then(response => response.json())
-        .then(() => {
-            console.log("new blog added")
-            setIsPending(false)
-        });
-        
-    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const report = { currency, category, date };
-        console.log(report);
-        addItem(currency, category, date);
-
+        const newItem = { currency: money, category: category, date: date }
+        console.log(newItem);
+        addItem(newItem);
     }
-
     return (
         <div className="SearchForm">
             <form id='form' onSubmit={handleSubmit}>
                 <input
                     id='amount-input'
                     type="number"
-                    onChange={(e) => setCurrency(e.target.value)}
+                    onChange={(e) => setMoney(e.target.value)}
                     step="any"
                     required
                 ></input>
@@ -50,7 +27,7 @@ function SearchForm() {
                     required
                     onChange={(e) => setCategory(e.target.value)}
                 >
-                    <option value="" disabled selected hidden>Choose Category</option>
+                    <option value="" >Choose Category</option>
                     <option value="entertainment">Entertainment</option>
                     <option value="housing">Housing</option>
                     <option value="transportation">Transportation</option>
@@ -70,11 +47,13 @@ function SearchForm() {
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
                 />
-                {!isPending && <button id='add-button'>+</button>}
-                {isPending && <button id='add-button' disabled>+...</button>}
+                <button>onSubmit</button>
+                {/* {!isPending && <button id='add-button'>+</button>}
+          {isPending && <button id='add-button'>+...</button>} */}
+
             </form>
-            <Items />
         </div>
     );
+
 }
-export default SearchForm;
+export default ItemForm;

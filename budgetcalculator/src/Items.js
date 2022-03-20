@@ -1,21 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import {useParams} from "react-router-dom"
 import './App.css';
 import BudgetList from './BudgetList.js'
+import useFetch from './useFetch';
 
 
 function Items() {
-    const [budget, setBudget] = useState(null);
-    useEffect(() => {
-        fetch('http://localhost:8000/budget').then(res => {
-            return res.json()
-        }).then(data => {
-            console.log(data);
-            setBudget(data);
+    const id = useParams();
+    const { data: budget, isPending, error} = useFetch("http://localhost:8000/budget/");
+
+    const handleClick = () => {
+        fetch("http://localhost:8000/budget/" + id, {
+            method:"DELETE"
         })
-    }, []);
+    }
+
+    
     return (
         <div className="Items">
+            {error && <div>{error}</div>}
+            {isPending && <div>Loading...</div>}
             {budget && <BudgetList budgets={budget} category={budget.category} />}
+            <button onClick={handleClick}>X</button>
         </div>
     );
 }
