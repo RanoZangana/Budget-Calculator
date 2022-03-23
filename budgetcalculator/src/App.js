@@ -7,12 +7,133 @@ import Footer from './Footer'
 import ItemForm from './ItemForm';
 import Item from './Item'
 
+function ChangeMonth({ getMonth }) {
+  const [monthInput, setMonthInput] = useState("");
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    getMonth(monthInput);
+  }
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input type="month" value={monthInput} onChange={(e) => setMonthInput(e.target.value)}></input>
+        <button>Get month</button>
+      </form>
+    </div>
+  );
+}
+
+function SeeCategory({getCategory}) {
+  const [categoryInput, setCategoryInput] = useState("");
+  const handleSubmit = e=>{
+    e.preventDefault();
+    getCategory(categoryInput);
+  }
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <select
+          required
+          onChange={(e)=> setCategoryInput(e.target.value)}
+        >
+          <option value="" >Choose Category</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="housing">Housing</option>
+          <option value="transportation">Transportation</option>
+          <option value="food">Food</option>
+          <option value="insurance">Insurance</option>
+          <option value="healthcare">Healthcare</option>
+          <option value="savings">Savings</option>
+          <option value="utilities">Utilities</option>
+          <option value="miscellaneous">Miscellaneous</option>
+        </select>
+        <button>Get category</button>
+      </form>
+    </div>
+  );
+}
 
 function App() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState([
+    {
+      currency: 100,
+      category: "entertainment",
+      date: "2022-02-01"
+    },
+    {
+      currency: 300,
+      category: "entertainment",
+      date: "2022-02-01"
+    },
+    {
+      currency: 50,
+      category: "entertainment",
+      date: "2022-02-01"
+    },
+    {
+      currency: 90,
+      category: "transportation",
+      date: "2022-03-01"
+    },
+    {
+      currency: 150,
+      category: "housing",
+      date: "2022-03-01"
+    },
+    {
+      currency: 1337,
+      category: "entertainment",
+      date: "2022-05-13"
+    },
+    {
+      currency: 9001,
+      category: "entertainment",
+      date: "2022-05-23"
+    }
+  ]);
+  let preMonth = [];
+  let total = 0;
+  const [month, setMonth] = useState([]);
+  const [totalMonth, setTotalMonth] = useState(0);
+  
+  const [category,setCategory] = useState([]);
+  const [totalCategory,setTotalCategory] = useState(0);
+  let preCategory = [];
+  let totalcat = 0;
+
+
+const getCategory = (category) => {
+for(let i = 0; i < items.length; i++){
+  if(items[i].category == category){
+    preCategory.push(items[i]);
+    totalcat += Number(items[i].currency);
+  }
+}
+setCategory(preCategory);
+setTotalCategory(totalcat);
+
+}
+
+  const getMonth = (monthInput) => {
+    setMonth([]);
+    for (let i = 0; i < items.length; i++) {
+      let year = new Date(items[i].date).getFullYear().toString();
+      let incompletemonth = (new Date(items[i].date).getMonth() + 1);
+      let month = (incompletemonth < 10 ? "0" : "") + incompletemonth.toString();
+      let date = year + "-" + month;
+
+      if (date == monthInput) {
+        preMonth.push(items[i]);
+        total += Number(items[i].currency);
+      }
+    }
+    setMonth(preMonth);
+    setTotalMonth(total);
+  }
 
   const addItem = (item) => {
-    const newItems = [...items, { item }];
+    const newItems = [...items, item];
     setItems(newItems);
   }
   return (
@@ -20,16 +141,31 @@ function App() {
       <h1>Flow</h1>
       <h2>Welcome to Flow! The number one Budgeting App</h2>
       <div className="container1">
-        {/* <ItemForm addItem={addItem} />
+        <ItemForm addItem={addItem} />
         <div>
           {items.map((item, index) => (
             <Item key={index} index={index} item={item} />
           ))}
-        </div> */}
-        <SearchForm />
-        <Items /> 
+        </div>
+        {/* <SearchForm />
+        <Items />  */}
       </div>
+
       <Footer />
+      <div>
+        <ChangeMonth getMonth={getMonth} />
+        {month.map((item, index) => (
+          <Item key={index} index={index} item={item} />
+        ))}
+        Total: {totalMonth}
+      </div>
+      <div>
+      <SeeCategory getCategory={getCategory} />
+        {category.map((item, index) => (
+          <Item key={index} index={index} item={item} />
+        ))}
+        Total: {totalCategory}
+      </div>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import './App.css';
 import './Items';
 
 function ItemForm({ addItem }) {
-    const [money, setMoney] = useState("");
+    const [money, setMoney] = useState(0);
     const [category, setCategory] = useState("");
     const [date, setDate] = useState("");
 
