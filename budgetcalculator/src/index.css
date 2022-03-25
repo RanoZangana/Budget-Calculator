@@ -1,13 +1,115 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(155, 209, 167);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App
+{
+  padding: 20px;
+
+}
+
+h1
+{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  font-size: 100px;
+  color:white;
+  text-shadow: 4px 4px hsl(98, 100%, 79%);
+  margin: 60px 0px 10px 0px;
+}
+
+h2
+{
+  text-align: center;
+  font-family: 'Lora', serif;
+  color:rgb(75, 75, 75);
+  font-size: 20px;
+  margin: 16px 0px 50px 0px;
+}
+
+#expense-form
+{
+  display:flex;
+  justify-content: center;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 4px 4px hsl(98, 100%, 79%);
+  margin: 0px 0px 50px 0px;
+}
+
+#amount-input
+{
+  border:none;
+  font-family: 'Lora', serif;
+  font-size: 16px;
+}
+
+#category-input
+{
+  border:none;
+  font-family: 'Lora', serif;
+  font-size: 16px;
+}
+
+#date-input
+{
+  border:none;
+  font-family: 'Lora', serif;
+  font-size: 16px;
+}
+
+#add-button
+{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 60px;
+  text-align: center;
+  color: rgb(75, 75, 75);
+  padding: 8;
+  border: none;
+  background: none;
+  text-shadow: 3px 3px hsl(98, 100%, 79%);
+}
+
+.Expense-list
+{
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  display:flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 4px 4px hsl(98, 100%, 79%);
+}
+
+ul{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+li:hover {
+  color:gray;
+  text-decoration: line-through;
+}
+
+.Footer
+{
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-size: 12px;
+  color:rgb(75, 75, 75);
+  padding: 20px;
 }
