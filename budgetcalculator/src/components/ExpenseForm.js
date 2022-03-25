@@ -23,7 +23,7 @@ const NewExpenseForm = () => {
             <select id='category-input'
             value={category} onChange={(e) => setCategory(e.target.value)} required >
 
-                <option value="" >Choose Category</option>
+                <option value="" disabled selected hidden>Choose Category</option>
                 
                 <option value="Housing">Housing</option>
                 <option value="Utilities">Utilities</option>
