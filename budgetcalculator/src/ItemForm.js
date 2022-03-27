@@ -19,6 +19,7 @@ function ItemForm({ addItem }) {
                 <input
                     id='amount-input'
                     type="number"
+                    placeholder='Amount'
                     onChange={(e) => setMoney(e.target.value)}
                     step="any"
                     required
