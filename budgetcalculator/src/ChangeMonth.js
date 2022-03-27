@@ -12,7 +12,7 @@ function ChangeMonth({ getMonth }) {
       <div>
         <form onSubmit={handleSubmit}>
           <input type="month" value={monthInput} onChange={(e) => setMonthInput(e.target.value)}></input>
-          <button>Get month</button>
+          <button id='month-button'>Get month</button>
         </form>
       </div>
     );
