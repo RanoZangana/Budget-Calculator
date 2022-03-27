@@ -14,9 +14,11 @@ function App() {
     <div className="App">
       <ExpenseContextProvider>
         <HeaderLogo />
-        <NewExpenseForm />
-        <ExpenseList />
-        {/* <Totals /> */}
+        <div className="Container1">
+          <NewExpenseForm />
+          <ExpenseList />
+          <Totals />
+        </div>
         {/* <BarChart /> */}
         <Footer />
       </ExpenseContextProvider>
