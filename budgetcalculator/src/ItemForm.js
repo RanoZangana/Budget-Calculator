@@ -29,15 +29,15 @@ function ItemForm({ addItem }) {
                     onChange={(e) => setCategory(e.target.value)}>
 
                     <option value="" >Choose Category</option>
-                    <option value="entertainment">Entertainment</option>
-                    <option value="housing">Housing</option>
-                    <option value="transportation">Transportation</option>
-                    <option value="food">Food</option>
-                    <option value="insurance">Insurance</option>
-                    <option value="healthcare">Healthcare</option>
-                    <option value="savings">Savings</option>
-                    <option value="utilities">Utilities</option>
-                    <option value="miscellaneous">Miscellaneous</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Housing">Housing</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="Food">Food</option>
+                    <option value="Insurance">Insurance</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Savings">Savings</option>
+                    <option value="Utilities">Utilities</option>
+                    <option value="Miscellaneous">Miscellaneous</option>
                 </select>
 
                 <input
