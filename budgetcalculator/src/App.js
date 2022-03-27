@@ -112,21 +112,21 @@ function App() {
         <Items />  */}
       </div>
 
-        <div className='Totals'>
-      <div className='ChangeMonth'>
-        <ChangeMonth getMonth={getMonth} />
-        {month.map((item, index) => (
-          <Item key={index} index={index} item={item} />
-        ))}
-        Total: {totalMonth}
-      </div>
-      <div className='SeeCategory'>
-        <SeeCategory getCategory={getCategory} />
-        {category.map((item, index) => (
-          <Item key={index} index={index} item={item} />
-        ))}
-        Total: {totalCategory}
-      </div>
+      <div className='Totals'>
+        <div className='ChangeMonth'>
+          <ChangeMonth getMonth={getMonth} />
+          {month.map((item, index) => (
+            <Item key={index} index={index} item={item} />
+          ))}
+          Total: {totalMonth}
+        </div>
+        <div className='SeeCategory'>
+          <SeeCategory getCategory={getCategory} />
+          {category.map((item, index) => (
+            <Item key={index} index={index} item={item} />
+          ))}
+          Total: {totalCategory}
+        </div>
       </div>
 
       <Footer />

@@ -10,7 +10,7 @@ function SeeCategory({getCategory}) {
     return (
       <div>
         <form onSubmit={handleSubmit}>
-          <select
+          <select id='see-category-input'
             required
             onChange={(e)=> setCategoryInput(e.target.value)}
           >
