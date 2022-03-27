@@ -6,57 +6,16 @@ import SearchForm from './Searchform';
 import Footer from './Footer'
 import ItemForm from './ItemForm';
 import Item from './Item'
+import ChangeMonth from './ChangeMonth';
+import SeeCategory from './SeeCategory';
 
-function ChangeMonth({ getMonth }) {
-  const [monthInput, setMonthInput] = useState("");
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    getMonth(monthInput);
-  }
-  return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input type="month" value={monthInput} onChange={(e) => setMonthInput(e.target.value)}></input>
-        <button>Get month</button>
-      </form>
-    </div>
-  );
-}
 
-function SeeCategory({getCategory}) {
-  const [categoryInput, setCategoryInput] = useState("");
-  const handleSubmit = e=>{
-    e.preventDefault();
-    getCategory(categoryInput);
-  }
-  return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <select
-          required
-          onChange={(e)=> setCategoryInput(e.target.value)}
-        >
-          <option value="" >Choose Category</option>
-          <option value="entertainment">Entertainment</option>
-          <option value="housing">Housing</option>
-          <option value="transportation">Transportation</option>
-          <option value="food">Food</option>
-          <option value="insurance">Insurance</option>
-          <option value="healthcare">Healthcare</option>
-          <option value="savings">Savings</option>
-          <option value="utilities">Utilities</option>
-          <option value="miscellaneous">Miscellaneous</option>
-        </select>
-        <button>Get category</button>
-      </form>
-    </div>
-  );
-}
+
 
 function App() {
   const [items, setItems] = useState([
-    {
+    /* {
       currency: 100,
       category: "entertainment",
       date: "2022-02-01"
@@ -90,7 +49,7 @@ function App() {
       currency: 9001,
       category: "entertainment",
       date: "2022-05-23"
-    }
+    } */
   ]);
   let preMonth = [];
   let total = 0;
