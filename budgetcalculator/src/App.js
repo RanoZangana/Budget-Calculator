@@ -97,8 +97,10 @@ setTotalCategory(totalcat);
   }
   return (
     <div className="App">
+
       <h1>Flow</h1>
       <h2>Welcome to Flow! The number one Budgeting App</h2>
+      
       <div className="container1">
         <ItemForm addItem={addItem} />
         <div>
@@ -110,7 +112,7 @@ setTotalCategory(totalcat);
         <Items />  */}
       </div>
 
-      <Footer />
+      
       <div>
         <ChangeMonth getMonth={getMonth} />
         {month.map((item, index) => (
@@ -125,6 +127,8 @@ setTotalCategory(totalcat);
         ))}
         Total: {totalCategory}
       </div>
+      
+      <Footer />
     </div>
   );
 }

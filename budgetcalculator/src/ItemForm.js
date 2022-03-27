@@ -14,7 +14,7 @@ function ItemForm({ addItem }) {
         addItem(newItem);
     }
     return (
-        <div className="SearchForm">
+        <div className="ItemForm">
             <form id='form' onSubmit={handleSubmit}>
                 <input
                     id='amount-input'
