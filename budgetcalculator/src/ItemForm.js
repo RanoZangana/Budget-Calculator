@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import './Items';
 
@@ -23,10 +23,10 @@ function ItemForm({ addItem }) {
                     step="any"
                     required
                 ></input>
-                <select
+                <select id='category-input'
                     required
-                    onChange={(e) => setCategory(e.target.value)}
-                >
+                    onChange={(e) => setCategory(e.target.value)}>
+
                     <option value="" >Choose Category</option>
                     <option value="entertainment">Entertainment</option>
                     <option value="housing">Housing</option>
@@ -38,6 +38,7 @@ function ItemForm({ addItem }) {
                     <option value="utilities">Utilities</option>
                     <option value="miscellaneous">Miscellaneous</option>
                 </select>
+
                 <input
                     id='date'
                     type="date"

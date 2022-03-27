@@ -25,7 +25,7 @@ function SeeCategory({getCategory}) {
             <option value="utilities">Utilities</option>
             <option value="miscellaneous">Miscellaneous</option>
           </select>
-          <button>Get category</button>
+          <button id='category-button'>Get category</button>
         </form>
       </div>
     );
