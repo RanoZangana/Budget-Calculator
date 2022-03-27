@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, setState } from "react";
 import { ExpenseContext } from '../contexts/ExpenseContext';
 import { ExpenseList } from '../components/ExpenseList';
 import React from "react";
@@ -36,7 +36,7 @@ const Totals = () => {
         }
       }
     }
-
+    setMonthState(uniqueMonthList);
   }
 
   const getInitialState = () => {
@@ -45,10 +45,12 @@ const Totals = () => {
   };
 
   const [value, setValue] = useState(getInitialState);
+  const [monthState, setMonthState] = useState("");
 
   const handleChange = (e) => {
     setValue(e.target.value);
     MonthList(e.target.value);
+    //setMonthState(MonthList());
   };
 
   return (
@@ -64,11 +66,11 @@ const Totals = () => {
 
       <p>{`You selected ${value}`}</p>
 
-      <select id="select-month">
-        <option>Choose a Month</option>
+      <select id="select-month" monthState ={setMonthState}>
+        <option>Choose a Month</option >
         {uniqueMonthList.map(val => <option value={val}>{val}</option>)}
       </select>
-
+      <p>{`Unique months ${monthState}`}</p>
       <h3 id='total-dates'>Total: </h3>
 
       {/* <select id='select-category'>
