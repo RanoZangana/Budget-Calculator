@@ -55,24 +55,24 @@ function App() {
   let total = 0;
   const [month, setMonth] = useState([]);
   const [totalMonth, setTotalMonth] = useState(0);
-  
-  const [category,setCategory] = useState([]);
-  const [totalCategory,setTotalCategory] = useState(0);
+
+  const [category, setCategory] = useState([]);
+  const [totalCategory, setTotalCategory] = useState(0);
   let preCategory = [];
   let totalcat = 0;
 
 
-const getCategory = (category) => {
-for(let i = 0; i < items.length; i++){
-  if(items[i].category == category){
-    preCategory.push(items[i]);
-    totalcat += Number(items[i].currency);
-  }
-}
-setCategory(preCategory);
-setTotalCategory(totalcat);
+  const getCategory = (category) => {
+    for (let i = 0; i < items.length; i++) {
+      if (items[i].category == category) {
+        preCategory.push(items[i]);
+        totalcat += Number(items[i].currency);
+      }
+    }
+    setCategory(preCategory);
+    setTotalCategory(totalcat);
 
-}
+  }
 
   const getMonth = (monthInput) => {
     setMonth([]);
@@ -100,7 +100,7 @@ setTotalCategory(totalcat);
 
       <h1>Flow</h1>
       <h2>Welcome to Flow! The number one Budgeting App</h2>
-      
+
       <div className="container1">
         <ItemForm addItem={addItem} />
         <div>
@@ -112,7 +112,7 @@ setTotalCategory(totalcat);
         <Items />  */}
       </div>
 
-      
+
       <div>
         <ChangeMonth getMonth={getMonth} />
         {month.map((item, index) => (
@@ -121,13 +121,13 @@ setTotalCategory(totalcat);
         Total: {totalMonth}
       </div>
       <div>
-      <SeeCategory getCategory={getCategory} />
+        <SeeCategory getCategory={getCategory} />
         {category.map((item, index) => (
           <Item key={index} index={index} item={item} />
         ))}
         Total: {totalCategory}
       </div>
-      
+
       <Footer />
     </div>
   );

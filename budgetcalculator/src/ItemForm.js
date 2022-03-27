@@ -47,7 +47,7 @@ function ItemForm({ addItem }) {
                     value={date}
                     onChange={(e) => setDate(e.target.value)}
                 />
-                <button>onSubmit</button>
+                <button id='add-button'>+</button>
                 {/* {!isPending && <button id='add-button'>+</button>}
           {isPending && <button id='add-button'>+...</button>} */}
 

@@ -3,37 +3,77 @@
   padding: 20px;
 }
 
-h1
-{
+h1 {
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-style: italic;
   font-size: 100px;
-  color:white;
+  color: white;
   text-shadow: 4px 4px hsl(98, 100%, 79%);
   margin: 60px 0px 10px 0px;
 }
 
-h2
-{
+h2 {
   text-align: center;
   font-family: 'Lora', serif;
-  color:rgb(75, 75, 75);
+  color: rgb(75, 75, 75);
   font-size: 20px;
   margin: 16px 0px 50px 0px;
 }
 
-.container1
-{
-  display: flex;
-  flex-direction: column;
+.ItemForm {
+  margin: auto;
+  padding: 16px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 4px 4px hsl(98, 100%, 79%);
+  max-width: 600px;
+  display:flex;
+  justify-content: center;
 }
 
-.ItemForm
+.Item
 {
-background-color: white;
-border-radius: 10px;
-box-shadow: 4px 4px hsl(98, 100%, 79%);
+  margin:auto;
+  background-color: white;
+}
+
+#month-button
+{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 60px;
+  text-align: center;
+  color: rgb(75, 75, 75);
+  padding: 8;
+  border: none;
+  background: none;
+  text-shadow: 3px 3px hsl(98, 100%, 79%);
+}
+
+#add-button
+{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 60px;
+  text-align: center;
+  color: rgb(75, 75, 75);
+  padding: 8;
+  border: none;
+  background: none;
+  text-shadow: 3px 3px hsl(98, 100%, 79%);
+
 }
 
 
+#authors
+{
+  grid-column-start: 2;
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-size: 12px;
+  color:rgb(75, 75, 75);
+  padding: 20px;
+}
