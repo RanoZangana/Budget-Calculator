@@ -128,3 +128,7 @@ h2 {
   color:rgb(75, 75, 75);
   padding: 20px;
 }
+.Totals{
+  display: flex;
+  justify-content: center;
+}
