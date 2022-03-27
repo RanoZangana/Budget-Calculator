@@ -132,3 +132,6 @@ h2 {
   display: flex;
   justify-content: center;
 }
+.ChangeMonth{
+  margin: 0 100px;
+}
