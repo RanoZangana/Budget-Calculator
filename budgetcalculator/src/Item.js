@@ -5,7 +5,9 @@ function Item({ item, index }) {
 
     return (
         <div className='Item'>
-            {item.currency}  {item.category}  {item.date}
+            <h3 className='item-category'>{item.category}</h3>
+            <p className='item-currency'>{item.currency} kr</p>
+            <p className='item-date'>{item.date}</p>
         </div>
     );
 }
